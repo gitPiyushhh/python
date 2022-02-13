@@ -2,13 +2,13 @@
 ############## Variables
 
 
-# x = 5
-# y = 3
+x = 5
+y = 3
 
-# name = 'Piyush'
+name = 'Piyush'
 
-# print(name[1:4])  #4th char is excluded
-# print(len(name)) 
+print(name[1:4])  #4th char is excluded
+print(len(name)) 
 
 
 
