@@ -24,5 +24,5 @@ print(x + y)
 x = int(argv[1]) 
 y = int(argv[2])
 
-print(argv[0]) ## This is the file name
-print(x + y)
+print(argv[0]) ## This is the file name             
+print(x + y)    

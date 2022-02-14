@@ -114,3 +114,21 @@
 
 # print(a,b)
 
+
+###################################################
+######### break, continue & pass
+
+# av = 5
+# i = 1
+
+# num = int (input("Number of candies"))
+
+# while i <= num:
+#     if i > av:
+#         print("Out of stock")
+#         break
+#     print("Candy{}".format(i))
+#     i += 1
+    
+def fun_name():
+    pass # Here I dont kow how to write this fct so I wll write it later🙂 {Use case of pass}
