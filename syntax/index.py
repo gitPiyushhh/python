@@ -56,7 +56,7 @@
 
 # ########################################
 # ############## Dictionary {Like object literal}
-
+ 
 # data = {1: 'Piyush', 2: 'Jonas'}
 
 # print(data)
@@ -132,3 +132,26 @@
     
 def fun_name():
     pass # Here I dont kow how to write this fct so I wll write it later🙂 {Use case of pass}
+
+
+###########################################
+######### FUNCTIONS
+
+## Normal
+def sum(a, b):
+    c = a+b
+    print(c)
+
+sum(1, 2)
+
+## Using the rest parameter 
+
+def sum(a, *b):     # Baaki saare bache hue param b me le lo😏
+    sum = a
+
+    for i in b:
+        sum += i
+
+    print(sum)
+
+sum(1, 2, 3, 4)

@@ -1,6 +1,7 @@
 ########################################
 ####### Taking input from user
 
+from array import *
 from sys import argv
 
 
@@ -26,3 +27,7 @@ y = int(argv[2])
 
 print(argv[0]) ## This is the file name             
 print(x + y)    
+
+########################################
+####### Taking input from user {For a array}
+
