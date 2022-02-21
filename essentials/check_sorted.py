@@ -25,4 +25,4 @@ def check_reverse_sorted(arr):
     return flag
 
 print(check_reverse_sorted(arr))
-
+print('test')
