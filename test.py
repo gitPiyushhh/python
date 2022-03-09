@@ -118,7 +118,6 @@ class LinkedList:
             n = n.next
             count += 1
         
-        print(count)
         # 3. Traverse to len/2 
         target = int(count / 2)
         
@@ -135,9 +134,49 @@ class LinkedList:
         node.next = n.next
         n.next = node
 
+    def rotate(self, k):
+        
+        # 1. Traverse to the kth node
+        head = self.head
+        
+        old_head = head
+        
+        for i in range(1, k):
+            head = head.next  # now head is pointing to the kth node ka head
+        
+        
+        ptr = head
+        
+        while ptr.next is not None:
+            ptr = ptr.next
+        
+        ptr.next = old_head 
+
+        while old_head != ptr:
+            old_head = old_head.next
+        
+        old_head.next = None
+        
+        return head
+
     
 ll = LinkedList()
 ll.insert_start(10)
 ll.insert_end(40)
 ll.insert_middle(30)
-# ll.print__ll()
+# ll.rotate(1)
+ll.print__ll()
+
+ll2 = LinkedList()
+
+ll2.insert_end(1)
+ll2.insert_end(2)
+ll2.insert_end(3)
+ll2.insert_end(4)
+ll2.insert_end(5)
+ll2.insert_end(6)
+ll2.insert_end(7)
+ll2.insert_end(8)
+
+ll2.rotate(4)
+ll2.print__ll()
