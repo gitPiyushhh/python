@@ -1,5 +1,5 @@
-#######################################
-##### Creation {Using list}
+######################################
+#### Creation {Using list}
 
 import collections
 from numpy import stack
@@ -36,3 +36,49 @@ stk.append(3)
 print(stk.pop())
 print(stk.pop())
 print(stk.pop())
+
+
+###################################################
+########## Implementation through Linked List😌
+
+class StackNode:
+    def __init__(self, data):
+        self.data = data
+    
+class MyStack:
+    def __init__(self):
+        self.root = None
+    
+    def insert(self, data):
+        ## 1. Node creation
+        new_node = StackNode(data)
+
+        ## 2. Node insertion  on the top
+        new_node.next = self.root
+
+        self.root = new_node
+
+        return
+    
+    def remove(self):
+        ## 1. Make the next node first node
+        r = self.root
+
+        if r is None:
+            return -1
+
+        self.root = self.root.next 
+
+        return r.data
+
+stk = MyStack()
+
+stk.insert(1)
+stk.insert(2)
+
+print(stk)
+
+last = stk.remove()
+sec_last = stk.remove()
+third_last = stk.remove()
+print(last, sec_last, third_last)
