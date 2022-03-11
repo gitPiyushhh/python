@@ -1,22 +1,44 @@
-########################################
-####### HASH MAP IMPLEMENTATION
+# ########################################
+# ####### HASH MAP IMPLEMENTATION
 
-# prices = {
-#     '6Mar': 300,
-#     '7Mar': 400
-# }
+# # prices = {
+# #     '6Mar': 300,
+# #     '7Mar': 400
+# # }
 
-# print(prices.keys())
-# print(prices['6Mar'] + prices['7Mar'])
+# # print(prices.keys())
+# # print(prices['6Mar'] + prices['7Mar'])
 
-stk = []
+# stk = []
 
-stk.append(1)
-stk.append(2)
+# s = 'aaabbccd'
+        
+# for i in s:
+#     # Empty stk
+#     if len(stk) == 0: 
+#         stk.append(i)
+#         continue
+            
+#     #For rest
+#     if stk[-1] == i: 
+#         print('Popped')
+#         stk.pop(-1)
+            
+#     else: stk.append(i)
+        
+# print(stk)
+        
+# s = ''
+# for i in range(len(stk)):
+#     s += stk.pop(-1)
+        
 
-stk.pop()
-elem = stk.pop()
+# stk = []
+# s = 'abcde'
 
-print(elem)
+# for _ in s:
+#     stk.append(_)
 
-stk_ll = 
+# print(stk)
+
+print(6//2)
