@@ -182,3 +182,93 @@
 # ll2.print__ll()
 
 
+#User function Template for python3
+
+
+class Solution:
+    def nsel_calc(self, arr, n):
+        ans = []
+        stk = []
+        
+        for i in range(n):
+            while len(stk) != 0 and stk[-1][0] >= arr[i]: stk.pop()
+            
+            # No smaller element
+            if len(stk) == 0: ans.append(-1)
+            
+            else: ans.append(stk[-1][1])
+            
+            stk.append([arr[i], i])
+        
+        return ans
+    
+    def nser_calc(self, arr, n):
+        
+        stk = []
+        ans = []
+        
+        for i in range(n-1, -1, -1):
+            # Here we run neg loop kyuki to right nikalna h seedha loop chalega toh left elems store hoge🙂4
+            while len(stk) != 0 and stk[-1][0] >= arr[i]:
+                # Elem smaller h nikal k fek do
+                stk.pop()
+            
+            if len(stk) == 0: ans.append(-1)
+            
+            else: ans.append(stk[-1][1])
+            
+            stk.append([arr[i], i])
+            
+        ans.reverse()
+        
+        return ans
+        
+    #Function to find largest rectangular area possible in a given histogram.
+    def getMaxArea(self,h):
+        # Next smaller element on the left
+        nsel = self.nsel_calc(h, len(h))
+        # Next smaller element on the right
+        nser = self.nser_calc(h, len(h))
+        
+        
+        area = []
+        max_area = 0
+        test = h
+        test2 = h
+        
+        flag = False
+
+        test.sort()
+        test2.sort(reverse=True)
+        
+        if test.sort() == h or test2.sort(reverse = True) == h: flag = True
+        
+
+        print(flag)
+        
+        for i in range(n):
+        
+            if not flag: width = nser[i] - nsel[i] - 1 #As the nser index is greater as on right
+            # When we have no right smaller elem
+            else: width = n-i
+            height = h[i]
+            area = width * height
+            
+            if area > max_area: max_area = area
+        
+        return max_area
+        
+    
+#{ 
+#  Driver Code Starts
+#Initial Template for Python 3
+
+# by Jinay Shah 
+
+if __name__ == '__main__':
+    test_cases = 1
+    for cases in range(test_cases) :
+        n = 5
+        a = [5, 4, 3, 2, 1]
+        ob=Solution()
+        print(ob.getMaxArea(a))
