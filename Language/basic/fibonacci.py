@@ -1,15 +1,36 @@
-def print_fib(n):
-    a = 0
-    b = 1
-    print(a)
-    print(b)
+###################################################
+##### Using iteration
 
-    for i in range(2, n):
-        c = a + b
-        a = b
-        b = c
-        print(c)    
+
+# def print_fib(n):
+#     a = 0
+#     b = 1
+#     print(a)
+#     print(b)
+
+#     for i in range(2, n):
+#         c = a + b
+#         a = b
+#         b = c
+#         print(c)    
+
+
+# n = int(input('Upto which number u want fib🙂: '))
+# print_fib(n)
+
+###################################################
+##### Using recursion
+
+def print_fib(n):
+    if n <= 1: 
+        return n
+
+    return print_fib(n-1) + print_fib(n-2)
+
 
 
 n = int(input('Upto which number u want fib🙂: '))
-print_fib(n)
+
+for i in range(n):
+    print(print_fib(i), end=' ')
+
