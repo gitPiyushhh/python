@@ -1,0 +1,9 @@
+arr = [1, 2, 3, 4, 1, 2]
+n = len(arr)
+
+d = dict()
+for i in range(n):
+    if arr[i] in d.keys(): d[arr[i]] += 1
+    else: d[arr[i]] = 1
+
+print(d)
